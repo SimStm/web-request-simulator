@@ -1,0 +1,20 @@
+{
+  "name": "web-request-simulator",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot index.ts",
+    "build": "bun build index.ts --outdir ./dist",
+    "build:docker": "docker build -t web-request-simulator . --no-cache",
+    "build:docker-x64": "docker buildx build --platform=linux/amd64 -t web-request-simulator . --no-cache"
+  },
+  "devDependencies": {
+    "bun-types": "^1.0.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
